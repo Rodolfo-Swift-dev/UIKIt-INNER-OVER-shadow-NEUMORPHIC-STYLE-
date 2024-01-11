@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         Button2.addNeomorphicInnerShadow(.inner)
 
         field.borderStyle = .none
-        field.addPaddin(10, 10)
+        field.addPaddin()
         field.addNeomorphicInnerShadow(.inner)
        
         
@@ -27,24 +27,25 @@ class ViewController: UIViewController {
 
 extension UITextField {
     
-    func addPaddin(_ paddingX: CGFloat, _ paddingY: CGFloat) {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: paddingX, height: self.frame.height))
-        let rightPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: paddingY , height: self.frame.height ))
-        
-        /*
-         let searchContainerImage = UIImage(systemName: "magnifyingglass.circle", withConfiguration: UIImage.SymbolConfiguration(weight: .semibold))
-         let searchContainerFrame = CGRect(x: rightPaddingView.frame.minX - (self.frame.height * 0.6), y: (self.frame.height * 0.2), width: (self.frame.height * 0.6), height: (self.frame.height * 0.6))
-     
-         let searchContainerView = UIImageView(image: searchContainerImage)
-         searchContainerView.frame = searchContainerFrame
-         */
+    func addPaddin() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+        let rightPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10 , height: self.frame.height ))
+      
         let searchContainerView = UIView(frame: CGRect(x: rightPaddingView.frame.minX - (self.frame.height * 0.6), y: (self.frame.height * 0.2), width: (self.frame.height * 0.6), height: (self.frame.height * 0.6)))
-        let searchContainerImage = UIImage(systemName: "magnifyingglass.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: self.frame.height * 0.5,  weight: .semibold))
+        
+        
+        var searchContainerImage = UIImage(systemName: "magnifyingglass.circle", withConfiguration: UIImage.SymbolConfiguration(pointSize: self.frame.height * 0.5, weight: .light))
+        
+                                           
+        
+        searchContainerImage = searchContainerImage?.withTintColor(.red, renderingMode: .alwaysTemplate)
+        
         
         let searchContainerImageView = UIImageView(image: searchContainerImage)
         searchContainerImageView.frame = CGRect(x: 0, y: 0, width: searchContainerView.frame.width, height: searchContainerView.frame.height)
         searchContainerView.layer.cornerRadius = searchContainerView.frame.width / 2
-        searchContainerView.addNeomorphicOverShadow(.over)
+        searchContainerView.tintColor = .red
+        
         searchContainerView.addSubview(searchContainerImageView)
         rightPaddingView.addSubview(searchContainerView)
 
@@ -73,6 +74,8 @@ extension UIView {
     public enum typeShadow{
         case inner,over
     }
+    
+    
     func addNeomorphicInnerShadow(_ type: typeShadow) {
         
         let scaleFactorX: CGFloat = self.bounds.width * -0.2

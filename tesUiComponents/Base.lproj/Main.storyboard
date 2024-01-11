@@ -30,20 +30,18 @@
                                 </buttonConfiguration>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe!" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FMa-Hk-Gjp">
-                                <rect key="frame" x="96.666666666666686" y="585" width="200" height="50"/>
+                                <rect key="frame" x="40" y="566" width="313" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="9vD-0Q-wKk"/>
                                     <constraint firstAttribute="height" constant="50" id="Bn4-ds-0il"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lU-kd-tIN" userLabel="Button1">
-                                <rect key="frame" x="96.666666666666686" y="217" width="200" height="50"/>
+                                <rect key="frame" x="40" y="217" width="313" height="50"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.2666666667" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="5L5-69-lmq"/>
                                     <constraint firstAttribute="height" constant="50" id="iLL-nQ-fi7"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="tintColor"/>
@@ -58,10 +56,14 @@
                         <constraints>
                             <constraint firstItem="onP-P9-fi7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0YP-AK-j4j"/>
                             <constraint firstItem="onP-P9-fi7" firstAttribute="top" secondItem="8lU-kd-tIN" secondAttribute="bottom" constant="59" id="1Xj-qu-fQ0"/>
+                            <constraint firstItem="FMa-Hk-Gjp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Byh-gC-5l8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8lU-kd-tIN" secondAttribute="trailing" constant="40" id="GnJ-qb-lQq"/>
                             <constraint firstItem="FMa-Hk-Gjp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCl-P9-TRW"/>
                             <constraint firstItem="8lU-kd-tIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ean-rY-mCK"/>
                             <constraint firstItem="onP-P9-fi7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hGc-hw-n3B"/>
-                            <constraint firstItem="FMa-Hk-Gjp" firstAttribute="top" secondItem="onP-P9-fi7" secondAttribute="bottom" constant="59" id="pIC-rA-lYm"/>
+                            <constraint firstItem="8lU-kd-tIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="jM9-rK-XvY"/>
+                            <constraint firstItem="FMa-Hk-Gjp" firstAttribute="top" secondItem="onP-P9-fi7" secondAttribute="bottom" constant="40" id="pIC-rA-lYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FMa-Hk-Gjp" secondAttribute="trailing" constant="40" id="uaL-AJ-3MI"/>
                         </constraints>
                     </view>
                     <connections>
